@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import string
 from odoo import fields, models
 
