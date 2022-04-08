@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+
+    <record id="data_vendor_tree_view" model="ir.ui.view">
+          <field name="name">data_vendor.tree.view</field>
+          <field name="model">data.vendor</field>
+          <field name="arch" type="xml">
+             <tree string="Data Vendor">
+                 <field name="name"/>
+                 <field name="address"/>
+                 <field name="contact"/>
+
+              </tree>
+          </field>
+      </record>
+
+   <record id="data_vendor_form_view" model="ir.ui.view">
+          <field name="name">data.vendor.form.view</field>
+          <field name="model">data.vendor</field>
+          <field name="arch" type="xml">
+             <form string="Data Vendor">
+
+                 <sheet>
+                     <group>
+                            <group>
+								<field name="name"/>
+								<field name="address"/>
+								<field name="contact"/>
+                            </group>
+                     </group>
+                    
+
+                 </sheet>
+
+              </form>
+          </field>
+      </record>
+
+  <record model="ir.actions.act_window" id="action_data_vendor">
+          <field name="name">Vendor</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">data.vendor</field>
+          <field name="view_mode">tree,form</field>
+      </record>
+
+  <menuitem name="Data Vendor" id="menu_data_vendor" parent="" action="action_data_vendor" sequence="60"/>
+
+</odoo>

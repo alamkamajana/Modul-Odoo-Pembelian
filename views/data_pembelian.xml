@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+	  <record id="data_pembelian_tree_view" model="ir.ui.view">
+			<field name="name">data_pembelian.tree.view</field>
+			<field name="model">data.pembelian</field>
+			<field name="arch" type="xml">
+			   <tree string="Data Pembelian">
+				   <field name="name"/>
+				   <field name="vendor"/>
+				   <field name="barang"/>
+				   <field name="jumlah"/>
+				   <field name="date"/>
+
+				</tree>
+			</field>
+		</record>
+
+	 <record id="data_pembelian_form_view" model="ir.ui.view">
+			<field name="name">data.pembelian.form.view</field>
+			<field name="model">data.pembelian</field>
+			<field name="arch" type="xml">
+			   <form string="Data Pembelian">
+
+				   <sheet>
+					   <group>
+							  <group>
+							    <field name="name"/>
+				   				<field name="vendor"/>
+				   				<field name="barang"/>
+				   				<field name="jumlah"/>
+				   				<field name="date"/>
+							  </group>
+					   </group>
+					  
+
+				   </sheet>
+
+				</form>
+			</field>
+		</record>
+
+	<record model="ir.actions.act_window" id="action_data_pembelian">
+			<field name="name">Data Pembelian</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">data.pembelian</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+	<menuitem name="Data Pembelian" id="menu_data_pembelian" parent="" action="action_data_pembelian" sequence="50"/>
+
+</odoo>

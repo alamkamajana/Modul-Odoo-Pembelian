@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+	  <record id="data_penjualan_tree_view" model="ir.ui.view">
+			<field name="name">data_penjualan.tree.view</field>
+			<field name="model">data.penjualan</field>
+			<field name="arch" type="xml">
+			   <tree string="data penjualan">
+				   <field name="kode"/>
+				   <field name="barang"/>
+				   <field name="jumlah"/>
+				   <field name="date"/>
+
+				</tree>
+			</field>
+		</record>
+
+	 <record id="data_penjualan_form_view" model="ir.ui.view">
+			<field name="name">data.penjualan.form.view</field>
+			<field name="model">data.penjualan</field>
+			<field name="arch" type="xml">
+			   <form string="data penjualan">
+
+				   <sheet>
+					   <group>
+							  <group>
+							    <field name="kode"/>
+				   				<field name="barang"/>
+				   				<field name="jumlah"/>
+				   				<field name="date"/>
+							  </group>
+					   </group>
+					  
+
+				   </sheet>
+
+				</form>
+			</field>
+		</record>
+
+	<record model="ir.actions.act_window" id="action_data_penjualan">
+			<field name="name">Data Penjualan</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">data.penjualan</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+	<menuitem name="data penjualan" id="menu_data_penjualan" parent="" action="action_data_penjualan" sequence="50"/>
+
+</odoo>
